@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+
+
+
+<img src="../static/wsb.png" alt="WSB" class="responsive">
+<h1>Basic Calculator</h1>
+<div class="names">
+    <ul>
+        <li>Bahtiyar Ali ALHAS</li>
+        <li>Naci Burak KARABULUT</li>
+        <li>Larissa IMPANO</li>
+        <li>Nadine KANTETERE</li>
+    </ul>
+</div>
+
+<form name="calculator">
+    <input id="display" type="text" name="display" >
+
+<div class="calc">
+    <table>
+        <tr>
+            <td>
+                <input type="button" name="seven" value=7 onclick="calculator.display.value += '7'">
+                <input type="button" name="eight" value="8" onclick="calculator.display.value += '8'">
+                <input type="button" name="nine" value="9" onclick="calculator.display.value += '9'">
+                <input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="four" value="4" onclick="calculator.display.value += '4'">
+                <input type="button" name="five" value="5" onclick="calculator.display.value += '5'">
+                <input type="button" name="six" value="6" onclick="calculator.display.value += '6'">
+                <input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="one" value="1" onclick="calculator.display.value += '1'">
+                <input type="button" name="two" value="2" onclick="calculator.display.value += '2'">
+                <input type="button" name="three" value="3" onclick="calculator.display.value += '3'">
+                <input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" class="operator" name="dot" value="." id="dot" onclick="calculator.display.value += '.'">
+                <input type="button" name="zero" value="0" id="zero" onclick="calculator.display.value += '0'">
+                <input type="button" name="doit" value="=" id="result" onclick="calculator.display.value = eval(calculator.display.value)">
+                <input type="button" class="operator" name="plus" value="+" id="plus" onclick="calculator.display.value += '+'">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" id="clear" name="clear" value="AC" onclick="calculator.display.value = ''">
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+</form>
+</body>
+
+</html>
