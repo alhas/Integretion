@@ -2,6 +2,7 @@ sudo: required
 dist: focal
 services:
   - docker
+  - xvfb
 language: python
 python:
   - "3.8"
