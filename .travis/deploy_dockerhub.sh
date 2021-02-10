@@ -1,16 +1,12 @@
-FROM python:3.8.3
-MAINTAINER alhas bahtiyaralialhas@gmail.com
-
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
-
-COPY service/ ./service
-COPY app.py .
-
-CMD ["python","./app.py"]
+docker login --username $DOCKER_USER --password $DOCKER_PASS
+if [ "$TRAVIS_BRANCH" = "main" ]; then
+  TAG="latest"
+else
+  TAG="$TRAVIS_BRANCH"
+fi
+docker build -f Dockerfile -t $DOCKER_REPO .
+sudo docker tag $DOCKER_REPO $DOCKER_REPOM
+sudo docker push $DOCKER_REPO:$TAG
 
 
 
