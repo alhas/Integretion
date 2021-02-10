@@ -17,7 +17,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - flask run
+  - python3 app.py
   - python3 test/test_views.py
 
 after_success:

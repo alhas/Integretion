@@ -10,7 +10,7 @@ class TestViews(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome(executable_path=PATH)
-        cls.driver.get("http://127.0.0.1:5000/")
+        cls.driver.get("http://0.0.0.0:80/")
 
     def test_buttons(self):
         self.driver.find_element_by_name("one").click()
