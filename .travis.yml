@@ -2,6 +2,7 @@ sudo: required
 dist: focal
 services:
   - docker
+  - xvfb
 language: python
 python:
   - "3.8"
@@ -21,6 +22,7 @@ install:
 
 before_script:
   - "export DISPLAY=:99.0"
+  - sleep 3
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
 script:
