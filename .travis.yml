@@ -27,5 +27,4 @@ script:
   - python3 test/test_views.py
 
 after_success:
-  - docker kill $DOCKER_REPO
   - sh .travis/deploy_dockerhub.sh
