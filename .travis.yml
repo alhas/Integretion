@@ -13,7 +13,7 @@ before_install:
   - sudo wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
   - sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 
-  - docker build -f Dockerfile -t $DOCKER_REPO
+  - docker build -f Dockerfile -t $DOCKER_REPO .
   - docker tag $DOCKER_REPO $DOCKER_REPOM
   - docker run -p 8000:80 $DOCKER_REPOM
   - docker ps
