@@ -15,7 +15,7 @@ before_install:
 
   - docker build -f Dockerfile -t $DOCKER_REPO .
   - docker tag $DOCKER_REPO $DOCKER_REPOM
-  - docker run -p 8000:80 $DOCKER_REPOM
+  - docker run -d -p 8000:80 $DOCKER_REPOM
   - docker ps
 install:
   - pip install -r requirements.txt
