@@ -22,7 +22,7 @@ install:
 
 before_script:
   - "export DISPLAY=:99.0"
-  - sleep 3
+  - sleep 2
 script:
   - python3 test/test_views.py
 
