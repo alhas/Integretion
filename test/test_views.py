@@ -5,6 +5,7 @@ from selenium import webdriver
 PATH = "/usr/bin/chromedriver"
 
 
+
 class TestViews(unittest.TestCase):
 
     @classmethod
