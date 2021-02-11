@@ -4,7 +4,6 @@ if [ "$TRAVIS_BRANCH" = "main" ]; then
 else
   TAG="$TRAVIS_BRANCH"
 fi
-docker build -f Dockerfile -t $DOCKER_REPO .
 sudo docker tag $DOCKER_REPO $DOCKER_REPOM
 sudo docker push $DOCKER_REPO:$TAG
 
